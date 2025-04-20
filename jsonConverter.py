@@ -9,7 +9,6 @@ def convertJson(lista):
 
     # Converte a lista para JSON
     convert = json.dumps(lista, indent=4, ensure_ascii=False)
-    print(convert)
 
     # Salva o JSON em um arquivo
     with open("Insumos.json", "w+", encoding="utf-8") as file:

@@ -17,11 +17,11 @@
     },
     {
         "ID": 2,
-        "NOME": "Magnésio",
-        "TIPO": "defensivo",
-        "QUANTIDADE": 100.0,
-        "VALIDADE": "2030-10-10T00:00:00",
-        "CUSTO": 10.0
+        "NOME": "Fosfito",
+        "TIPO": "Fertilizante",
+        "QUANTIDADE": 30.0,
+        "VALIDADE": "2039-10-10T00:00:00",
+        "CUSTO": 23.0
     },
     {
         "ID": 3,
@@ -30,5 +30,13 @@
         "QUANTIDADE": 200.0,
         "VALIDADE": "2028-09-20T00:00:00",
         "CUSTO": 45.0
+    },
+    {
+        "ID": 61,
+        "NOME": "Ozônio",
+        "TIPO": "defensivo",
+        "QUANTIDADE": 400.0,
+        "VALIDADE": "2090-03-10T00:00:00",
+        "CUSTO": 270.0
     }
 ]

@@ -179,7 +179,7 @@ def passar_tabela_json():
     lista = actions.listarInsumosComoDicionario()
     
     jsonConverter.convertJson(lista)
-    print(lista)
+    print("Dados exportados para JSON com sucesso!")
 
 # Menu principal
 def menu():
