@@ -11,10 +11,37 @@ insumos = []
 def cadastrar_insumo():
     print()
     nome = input("Nome do insumo: ")
+    if nome == None or nome == "":
+        print("Nome inválido!")
+        return
     tipo = input("Tipo (semente, fertilizante, defensivo): ")
-    quantidade = int(input("Quantidade (unidades): "))
-    validade = input("Data de validade (dd/mm/aaaa): ")
-    custo = float(input("Custo por unidade (R$): "))
+    
+    try:
+        quantidade = int(input("Quantidade (unidades): "))
+        if quantidade <= 0:
+            print("A quantidade deve ser um número inteiro positivo!")
+            return
+    except ValueError:
+        print("Insira um valor válido para a quantidade!")
+        return
+    
+    try:
+        validade = input("Data de validade (dd/mm/aaaa): ")
+        if validade != datetime.strptime(validade, "%d/%m/%Y").strftime("%d/%m/%Y"):
+            print("Data inválida!")
+            return
+    except ValueError:
+        print("Data inválida! Use o formato dd/mm/aaaa/")
+        return
+        
+    try:
+        custo = float(input("Custo por unidade (R$): "))
+        if custo <= 0:
+            print("O custo deve ser um número positivo!")
+            return
+    except ValueError:
+        print("Insira um valor válido para o custo!")
+        return
     
     print("Cadastrando insumo...")
     
@@ -41,6 +68,7 @@ def listar_insumos():
         print(tratamentoInfoDataFrame)
         
     print("\nLISTADOS!")
+    Utils.waitAndClean(5)
   
 # Busca insumo por nome
 def buscar_insumo():
@@ -113,24 +141,33 @@ def editar_insumo():
 # Exclui um insumo
 def excluir_insumo():
     print()
+    print("================ EXCLUSÃO DE INSUMO ================")
+    
     listar_insumos()
     nuneroInsumoTabela = actions.contarItensTabela()
             
     if not nuneroInsumoTabela:
-        # TODO: Testar ausência de insumos na tabela.
         print("Não existem insumos cadastrados.")
         return
 
     try:
-        indice = int(input("Digite o número do insumo que deseja excluir: "))
-        if indice <= 0 or indice > nuneroInsumoTabela:
-            print("Digite um número válido!")
+        id_insumo = int(input("Digite o ID do insumo que deseja excluir: "))
+        
+        # Verifica se o ID existe no banco de dados
+        if not actions.consultaIdInsumo(id_insumo):
+            print(f"Insumo com ID {id_insumo} não encontrado.")
             return
-        else: 
-            actions.exclusaoInsumo(id=indice)
+        
+        # Exclui o insumo
+        actions.exclusaoInsumo(id=id_insumo)
+        print(f"Insumo com ID {id_insumo} excluído com sucesso.")
+    except ValueError:
+        print("Entrada inválida. Por favor, insira um número válido para o ID.")
     except actions.oracledb.DatabaseError as e:
         error, = e.args
-        print(f"Erro {e} na tentativa de exclusão do insumo.")
+        print(f"Erro {error.code} na tentativa de exclusão do insumo: {error.message}")
+    except Exception as e:
+        print(f"Erro inesperado: {e}")
 
 # Verifica insumos vencidos
 def verificar_insumos_vencidos():

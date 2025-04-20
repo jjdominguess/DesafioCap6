@@ -42,7 +42,6 @@ def listarInsumos()-> list:
         listaInsumos.append(dt)
     
     listaInsumos = sorted(listaInsumos)
-    print(listaInsumos)
     return listaInsumos
 
 def listarInsumosComoDicionario() -> list:
@@ -174,7 +173,7 @@ def editarInsumo(id, novoNome=None, novoTipo=None, novaQuantidade=None, novaVali
         # Executa a consulta
         cursor.execute(consulta, valores)
         conexao.commit()
-        print("Insumo atualizado com sucesso.")
+        
     except oracledb.DatabaseError as e:
         error, = e.args
         print(f"Erro ao editar insumo: Código {error.code}, Mensagem: {error.message}")
