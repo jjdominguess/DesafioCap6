@@ -1,7 +1,7 @@
-import DBIntegration as db
+import DB_Service.DBIntegration as db
 import pandas
 import oracledb
-import Utils
+import Utils.Utils as Utils
 
 conexao = db.conexaoDB()
 cursor = conexao.cursor()

@@ -1,8 +1,8 @@
 from datetime import datetime
-import DBAction as actions
-import Utils
+import Actions.DBAction as actions
+import Utils.Utils as Utils
 import pandas
-import jsonConverter
+import ConversorJson.jsonConverter as jsonConverter
 
 # criação da lista
 insumos = []

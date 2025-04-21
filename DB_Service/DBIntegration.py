@@ -1,9 +1,7 @@
 import os
-import json
 import time
 import oracledb
-import pandas as pd
-import Utils
+import Utils.Utils as Utils
 
 flagConexao: bool
 
