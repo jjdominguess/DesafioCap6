@@ -10,8 +10,8 @@ flagConexao: bool
 def conexaoDB():
     try:
         conexao = oracledb.connect(
-            user="rm564111",
-            password="fiap25",
+            user="",
+            password="",
             dsn="oracle.fiap.com.br:1521/ORCL",
         )
     except oracledb.DatabaseError as e:
