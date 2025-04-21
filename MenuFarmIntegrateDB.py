@@ -68,7 +68,6 @@ def listar_insumos():
         print(tratamentoInfoDataFrame)
         
     print("\nLISTADOS!")
-    Utils.waitAndClean(5)
   
 # Busca insumo por nome
 def buscar_insumo():
@@ -173,7 +172,7 @@ def excluir_insumo():
 def verificar_insumos_vencidos():
     print()
     vencidos = actions.consultaValidadeInsumo()
-    print(vencidos)
+    print("Estes são os insumos fora da validade: \n", vencidos)
 
 def passar_tabela_json():
     lista = actions.listarInsumosComoDicionario()

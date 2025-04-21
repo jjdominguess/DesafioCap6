@@ -1,109 +1,61 @@
-# Controle de Insumos Agrícolas
+# FIAP - Faculdade de Informática e Administração Paulista
 
-Este projeto é uma aplicação para gerenciar insumos agrícolas, permitindo o cadastro, consulta, edição, exclusão e exportação de dados para JSON. Ele utiliza um banco de dados Oracle para armazenar as informações e oferece uma interface de menu interativo para o usuário.
+<p align="center">
+<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
+</p>
 
----
+<br>
 
-## Estrutura do Projeto
+# Nome do projeto
 
-A estrutura do projeto é composta pelos seguintes arquivos:
+## Nome do grupo
 
-### Arquivos e Suas Funções
+## 👨‍🎓 Integrantes: 
+- <a href="https://www.linkedin.com/company/inova-fusca">João José Domingues Silva</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Lais Claus</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Murilo Santana</a> 
+- <a href="https://www.linkedin.com/company/inova-fusca">Lucas Ladeira</a> 
+- <a href="https://www.linkedin.com/company/inova-fusca">Carlos Lanzi</a>
 
-#### **1. `DBAction.py`**
-Este arquivo contém as funções principais para manipulação dos dados no banco de dados. Ele utiliza a conexão estabelecida em `DBIntegration.py` e fornece funcionalidades como cadastro, consulta, edição e exclusão de insumos.
+## 👩‍🏫 Professores:
+### Tutor(a) 
+- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
+### Coordenador(a)
+- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
 
-- **Funções Implementadas:**
-  - `cadastrarInsumo(nome, tipo, quantidade, validade, custo)`: Insere um novo insumo no banco de dados.
-  - `listarInsumos() -> list`: Retorna todos os insumos cadastrados no banco de dados como uma lista.
-  - `listarInsumosComoDicionario() -> list`: Retorna os insumos como uma lista de dicionários.
-  - `buscarInsumo(nome)`: Busca insumos pelo nome, ignorando maiúsculas/minúsculas e acentos.
-  - `contarItensTabela() -> int`: Retorna o número total de insumos cadastrados.
-  - `consultaIdInsumo(id) -> bool`: Verifica se um insumo com o ID fornecido existe.
-  - `consultaValidadeInsumo() -> list`: Retorna os insumos cuja validade já expirou.
-  - `editarInsumo(id, novoNome, novoTipo, novaQuantidade, novaValidade, novoCusto)`: Atualiza os dados de um insumo com base no ID.
-  - `excluirTabela()`: Exclui a tabela de insumos do banco de dados.
-  - `exclusaoInsumo(id)`: Exclui um insumo específico com base no ID.
 
----
+## 📜 Descrição
 
-#### **2. `DBIntegration.py`**
-Este arquivo é responsável por estabelecer a conexão com o banco de dados Oracle e criar a tabela de insumos, caso ela ainda não exista.
+*Este projeto é uma aplicação para gerenciar insumos agrícolas, permitindo o cadastro, consulta, edição, exclusão e exportação de dados para JSON. Ele utiliza um banco de dados Oracle para armazenar as informações e oferece uma interface de menu interativo para o usuário.*
 
-- **Funções Implementadas:**
-  - `conexaoDB()`: Estabelece a conexão com o banco de dados Oracle.
-  - `tabelaInsumos()`: Cria a tabela `INSUMOS` no banco de dados, caso ela ainda não exista.
 
----
+## 📁 Estrutura de pastas
 
-#### **3. `MenuFarmIntegrateDB.py`**
-Este arquivo implementa o menu principal da aplicação, permitindo que o usuário interaja com as funcionalidades do sistema.
+Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
-- **Funções Implementadas:**
-  - `cadastrar_insumo()`: Permite ao usuário cadastrar um novo insumo.
-  - `listar_insumos()`: Lista todos os insumos cadastrados.
-  - `buscar_insumo()`: Permite ao usuário buscar um insumo pelo nome.
-  - `editar_insumo()`: Permite ao usuário editar os dados de um insumo existente.
-  - `excluir_insumo()`: Permite ao usuário excluir um insumo pelo ID.
-  - `verificar_insumos_vencidos()`: Lista os insumos cuja validade já expirou.
-  - `passar_tabela_json()`: Exporta os dados dos insumos para um arquivo JSON.
-  - `menu()`: Exibe o menu principal e gerencia a navegação entre as opções.
+- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
 
----
+- <b>DB_Service</b>: Esta pasta possui o arquivo responsável por estabelecer a conexão com o banco de dados Oracle e criar a tabela de insumos, caso ela ainda não exista.
 
-#### **4. `jsonConverter.py`**
-Este arquivo é responsável por converter os dados dos insumos para o formato JSON e salvá-los em um arquivo.
+- <b>Utils</b>: Esta pasta possui o arquivo responsável por funções utilitárias para limpar a tela e pausar a execução do programa.
 
-- **Funções Implementadas:**
-  - `convertJson(lista)`: Converte uma lista de insumos para JSON, tratando valores do tipo `Timestamp`, e salva o resultado no arquivo `Insumos.json`.
+- <b>DBAction</b>: Esta pasta contém o arquivo responsável por funções principais para manipulação dos dados no banco de dados. Ele utiliza a conexão estabelecida em `DBIntegration.py` e fornece funcionalidades como cadastro, consulta, edição e exclusão de insumos.
 
----
+- <b>MenuFarmIntegrateDB.py</b>: Este arquivo implementa o menu principal da aplicação, permitindo que o usuário interaja com as funcionalidades do sistema.
 
-#### **5. `Utils.py`**
-Este arquivo contém funções utilitárias para limpar a tela e pausar a execução do programa.
+- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
 
-- **Funções Implementadas:**
-  - `waitAndClean(seconds)`: Aguarda um número de segundos e limpa a tela do terminal.
+- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
----
+## 🔧 Como executar o código
 
-#### **6. `Insumos.json`**
-Este arquivo armazena os dados dos insumos exportados no formato JSON. Ele é gerado pela função `convertJson` do arquivo `jsonConverter.py`.
+*Utilizando o comando no terminal "python MenuFarmIntegrateDB.py" no local onde se encontra o arquivo(python MenuFarmIntegrateDB.py).*
 
----
 
-## Fluxo de Execução
+## 🗃 Histórico de lançamentos
 
-1. **Início da Aplicação:**
-   - O programa começa com a execução do arquivo `MenuFarmIntegrateDB.py`, que exibe o menu principal.
+* 1.0.0 - 21/04/2025
 
-2. **Interação com o Usuário:**
-   - O usuário pode escolher entre as opções do menu para cadastrar, listar, buscar, editar, excluir ou exportar insumos.
+## 📋 Licença
 
-3. **Manipulação de Dados:**
-   - As funções em `DBAction.py` são chamadas para realizar operações no banco de dados.
-
-4. **Exportação para JSON:**
-   - Os dados podem ser exportados para o arquivo `Insumos.json` usando a opção correspondente no menu.
-
----
-
-## Requisitos
-
-- **Linguagem:** Python 3.10 ou superior.
-- **Bibliotecas Necessárias:**
-  - `oracledb`
-  - `pandas`
-  - `json`
-  - `os`
-  - `time`
-- **Banco de Dados:** Oracle Database.
-
----
-
-## Como Executar
-
-1. Certifique-se de que o banco de dados Oracle está configurado e acessível.
-2. Instale as dependências necessárias:
-   ```bash
-   pip install oracledb pandas
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
