@@ -1,21 +1,13 @@
 # FIAP - Faculdade de Informática e Administração Paulista
 
-<p align="center">
-<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
-</p>
-
-<br>
-
 # Nome do projeto
-
-## Nome do grupo
-
+  Python e além: Gestão de agronegócio
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">João José Domingues Silva</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Lais Claus</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Murilo Santana</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Lucas Ladeira</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Carlos Lanzi</a>
+- <a>João José Domingues Silva</a>
+- <a>Lais Londo Claus</a>
+- <a>Murilo Santana</a> 
+- <a>Lucas Alves Ladeira</a> 
+- <a>Carlos Eduardo Campos Lanzi</a>
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
@@ -23,12 +15,11 @@
 ### Coordenador(a)
 - <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
 
-
 ## 📜 Descrição
 
 *Este projeto é uma aplicação para gerenciar insumos agrícolas, permitindo o cadastro, consulta, edição, exclusão e exportação de dados para JSON. Ele utiliza um banco de dados Oracle para armazenar as informações e oferece uma interface de menu interativo para o usuário.*
 
-
+  
 ## 📁 Estrutura de pastas
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
@@ -49,7 +40,9 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-*Utilizando o comando no terminal "python MenuFarmIntegrateDB.py" no local onde se encontra o arquivo(python MenuFarmIntegrateDB.py).*
+* Primeiro é necessário preencher os campos "user" e "password" com um usuário e senha valida no Oracle DB ![image](https://github.com/user-attachments/assets/ef6ed51d-308d-400f-b35c-d73935f68ae9)
+  após isso, utilizando o comando no terminal "python MenuFarmIntegrateDB.py" no local onde se encontra o arquivo(python MenuFarmIntegrateDB.py).*
+
 
 
 ## 🗃 Histórico de lançamentos
