@@ -1,4 +1,6 @@
-# FIAP - Faculdade de Informática e Administração Paulista
+# FIAP - Faculdade de Informática e Administração Paulista 
+# ![logo-fiap](https://github.com/user-attachments/assets/865e5a16-11cf-47b7-9537-4984876373a1)
+
 
 # Nome do projeto
   Python e além: Gestão de agronegócio
