@@ -40,7 +40,8 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-*Utilizando o comando no terminal "python MenuFarmIntegrateDB.py" no local onde se encontra o arquivo(python MenuFarmIntegrateDB.py).*
+* Primeiro é necessário preencher os campos "user" e "password" com um usuário e senha valida no Oracle DB após isso, utilizando o comando no terminal "python MenuFarmIntegrateDB.py" no local onde se encontra o arquivo(python MenuFarmIntegrateDB.py).*
+
 
 
 ## 🗃 Histórico de lançamentos
