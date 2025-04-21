@@ -1,0 +1,11 @@
+# Ignorar arquivos de configuração sensíveis
+*.env
+*.pyc
+__pycache__/
+
+# Ignorar arquivos de banco de dados
+*.db
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+Thumbs.db
